@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Formatting a header-->
+    <h1 style = "text-align: center;">Pong Game</h1>
+    <hr><br>
+
+    <!--Inputs for things (mostly customisation)-->
+    <div style = "position: absolute;">
+    <form>
+    <label for="ballColor">Ball Color:</label>
+    <input type="color" id="ballColor" value="#F5F5F5">
+    <br>
+    <label for="paddleColor1">Paddle Color (P1):</label>
+    <input type="color" id="paddleColor1" value="#F5F5F5">
+    <br>
+    <label for="paddleColor2">Paddle Color (P2):</label>
+    <input type="color" id="paddleColor2" value="#F5F5F5">
+    <br>
+    <label for="canvasColor">Background Color:</label>
+    <input type="color" id="canvasColor" value="#000000">
+    <br>
+    <label for="reset">Reset Colors: </label>
+    <input type="reset" id="reset"></input>
+    </form>
+    <br>
+    <label for="cheat1">Enable Cheats (P1):
+    <input type="checkbox" id="cheat1"></input>
+    </label>
+    <br>
+    <label for="cheat2">Enable Cheats (P2):
+    <input type="checkbox" id="cheat2"></input>
+    </label>
+    <br>
+    <label for="pause">Pause the game:
+    <input type="checkbox" id="pause"></input>
+    </label>
+    <br><br>
+    <a href = "index.html"><button>Play Breakout</button></a>
+    </div>
+
+    <!--Creating the canvas-->
+    <canvas id="myCanvas"></canvas>
+    <br><hr><br>
+
+    <!--Start Button-->
+    <div class = "container">
+        <div class = "center">
+            <button id="runButton">Start game</button>
+        </div>
+    </div>
+    
+    <!--Linking the JavaScript file-->
+    <script src="index2.js"></script>
+</body>

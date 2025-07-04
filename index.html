@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Formatting a header-->
+    <h1 style = "text-align: center;">Breakout Game</h1>
+    <hr><br>
+
+    <!--Inputs for things (mostly customisation)-->
+    <div style = "position: absolute;">
+    <form>
+    <label for="ballColor">Ball Color:</label>
+    <input type="color" id="ballColor" value="#F5F5F5">
+    <br>
+    <label for="paddleColor">Paddle Color:</label>
+    <input type="color" id="paddleColor" value="#F5F5F5">
+    <br>
+    <label for="canvasColor">Background Color:</label>
+    <input type="color" id="canvasColor" value="#000000">
+    <br>
+    <label for="row1">Brick Color (Row 1):</label>
+    <input type="color" id="row1" value="#B72727">
+    <br>
+    <label for="row2">Brick Color (Row 2):</label>
+    <input type="color" id="row2" value="#B66526">
+    <br>
+    <label for="row3">Brick Color (Row 3):</label>
+    <input type="color" id="row3" value="#B7B027">
+    <br>
+    <label for="row4">Brick Color (Row 4):</label>
+    <input type="color" id="row4" value="#6DB626">
+    <br>
+    <label for="row5">Brick Color (Row 5):</label>
+    <input type="color" id="row5" value="#27B7B0">
+    <br>
+    <label for="reset">Reset Colors: </label>
+    <input type="reset" id="reset"></input>
+    </form>
+    <br>
+    <label for="cheat">Enable Cheats:
+    <input type="checkbox" id="cheat"></input>
+    </label>
+    <br>
+    <label for="pause">Pause the game:
+    <input type="checkbox" id="pause"></input>
+    </label>
+    <br><br>
+    <a href = "index2.html"><button>Play Pong</button></a>
+    </div>
+
+    <!--Creating the canvas-->
+    <canvas id="myCanvas"></canvas>
+    <br><hr><br>
+
+    <!--Start Button-->
+    <div class = "container">
+        <div class = "center">
+            <button id="runButton">Start game</button>
+        </div>
+    </div>
+    <!--Linking the JavaScript file-->
+    <script src="index.js"></script>
+</body>
