@@ -7,7 +7,8 @@ let ballColor = document.getElementById("ballColor").value;
 let backgroundColor = document.getElementById("canvasColor").value;
 let cheatEnabled1 = document.getElementById("cheat1").checked;
 let cheatEnabled2 = document.getElementById("cheat2").checked;
-let cheatOffset = 0;
+let cheatOffset1 = 0;
+let cheatOffset2 = 0;
 let pauseEnabled = document.getElementById("pause").checked;
 
 let player1Up = false;
@@ -146,13 +147,13 @@ function draw() {
     cheatEnabled2 = document.getElementById("cheat2").checked;
 
     if (cheatEnabled1) {
-        player1Y = ballY + playerHeight / 2 - cheatOffset
-        player1Y = Math.max(0, Math.min(canvas.height - playerHeight, ballY - playerHeight / 2 + cheatOffset));
+        player1Y = ballY + playerHeight / 2 - cheatOffset1
+        player1Y = Math.max(0, Math.min(canvas.height - playerHeight, ballY - playerHeight / 2 + cheatOffset1));
     }
 
     if (cheatEnabled2) {
-        player2Y = ballY + playerHeight / 2 - cheatOffset
-        player2Y = Math.max(0, Math.min(canvas.height - playerHeight, ballY - playerHeight / 2 + cheatOffset));
+        player2Y = ballY + playerHeight / 2 - cheatOffset2
+        player2Y = Math.max(0, Math.min(canvas.height - playerHeight, ballY - playerHeight / 2 + cheatOffset2));
     }
 
     if (dx < 0) {
@@ -176,7 +177,7 @@ function draw() {
                 case 11: dy = 1.5; break;
                 }
                 dx = -dx
-                cheatOffset = Math.floor(Math.random() * 33) - 16;
+                cheatOffset2 = Math.floor(Math.random() * 33) - 16;
             } else {
                 ballX = canvas.width/2;
                 ballY = canvas.height/2;
@@ -202,7 +203,7 @@ function draw() {
                 case 11: dy = 1.5; break;
                 }
                 dx = -dx
-                cheatOffset = Math.floor(Math.random() * 33) - 16;
+                cheatOffset1 = Math.floor(Math.random() * 33) - 16;
             } else {
                 ballX = canvas.width/2;
                 ballY = canvas.height/2;
